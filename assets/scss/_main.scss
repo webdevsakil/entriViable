@@ -1,0 +1,110 @@
+.spellon-main {
+    padding-top: 90px;
+    background: #f5f5f5;
+    padding-bottom: 30px;
+    min-height: 100vh;
+
+    // spellon search
+    .spellon-search {
+        display: flex;
+
+        .search-option-area {
+            position: relative;
+
+            .search-option-btn {
+                button {
+                    background: transparent;
+                    border: 0;
+                    color: #212F64;
+                    text-transform: capitalize;
+                    font-weight: 400;
+                    font-size: 0.875rem;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+
+                    &:hover {
+                        background: #e4e6ff72;
+                    }
+                }
+
+                .fa-chevron-down {
+                    font-size: 12px;
+                    display: inline-block;
+                    color: #212F64;
+                }
+            }
+
+            .search-option-list {
+                position: absolute;
+                list-style-type: none;
+                padding: 0px;
+                top: 45px;
+                left: 0px;
+                width: 235px;
+                background: #fff;
+                z-index: 899;
+                box-shadow: 2px 2px 2px 3px rgba(128, 128, 128, 0.08);
+                border-radius: 6px;
+                padding-bottom: 20px;
+                padding-top: 10px;
+                transform: scale(0);
+                transform-origin: top;
+                transition: all ease-in 0.3s;
+
+                li {
+                    padding: 5px 15px;
+                    text-transform: capitalize;
+                    color: rgba(34, 34, 34, 0.956);
+
+                    &:hover {
+                        background: #e4e6ff;
+                    }
+                }
+
+                &.show-option {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        // search
+        .search-form {
+            position: relative;
+            margin-top: 2px;
+            input {
+                width: 560px;
+                padding: 6px 10px;
+                border: 1px solid rgba(128, 128, 128, 0.322);
+                border-radius: 5px;
+
+                &::placeholder {
+                    text-transform: capitalize;
+                }
+
+                &:focus {
+                    border: 1px solid rgba(0, 0, 0, 0.334);
+                    outline: none;
+                }
+            }
+        }
+
+        .search-btn {
+            position: absolute;
+            top: 0;
+            right: 1px;
+            height: 38px;
+            padding: 0px 24px;
+            border: 1px solid rgba(128, 128, 128, 0.322);
+            border-left: none;
+            outline: none;
+            background: #e4e6ff;
+            color: rgb(122, 122, 122);
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            transition: all ease-in-out 0.4s;
+            &:hover{
+                opacity: 0.4;
+            }
+        }
+    }
+}
